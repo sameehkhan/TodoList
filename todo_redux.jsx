@@ -1,3 +1,5 @@
-import configureStore from './store/store';
+import configureStore from './frontend/store/store';
 
-window.store = store;
+document.addEventListener("DOMContentLoaded", function(event) {
+  window.store = configureStore();
+});
