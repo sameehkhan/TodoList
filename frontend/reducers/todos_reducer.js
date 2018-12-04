@@ -17,7 +17,14 @@ const initialState = {
 };
 
 const todosReducer = (state = initialState, action) => {
+  let nextState = {};
+
   switch(action.type) {
+    case RECEIVE_TODOS:
+    action.todos.forEach(todo => {
+        nextState[todo.id] = todo;
+      });
+      return nextState;
     default:
       return state;
   }
