@@ -6,7 +6,10 @@ export const receiveTodos = (todos) => ({ // This "todos" variable is an array A
   todos: todos // This is an array
 });
 
-export const receiveTodo = (todo) => ({
-  type: RECEIVE_TODO,
-  todo: todo
-});
+export const receiveTodo = todo => (
+  {
+    type: RECEIVE_TODO,
+    todo: todo,
+  });
+
+window.receiveTodo = receiveTodo;
