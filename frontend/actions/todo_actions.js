@@ -13,3 +13,4 @@ export const receiveTodo = todo => (
   });
 
 window.receiveTodo = receiveTodo;
+window.receiveTodos = receiveTodos;
