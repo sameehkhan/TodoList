@@ -1,4 +1,5 @@
 import React from 'react';
+import connect from './todos/todo_list_container';
 
 class App extends React.Component {
   render() {
