@@ -5,9 +5,11 @@ import App from './frontend/components/app';
 import Root from './frontend/components/root';
 import allTodos from './frontend/reducers/selectors';
 
+const store = configureStore();
+
 document.addEventListener("DOMContentLoaded", function(event) {
-  window.store = configureStore();
+  const Content = document.getElementById('content');
+  ReactDOM.render(<Root store={store}/>, Content);
 });
 
-const Content = document.getElementById('content');
-ReactDOM.render(<Root/>, Content);
+window.store = store; 

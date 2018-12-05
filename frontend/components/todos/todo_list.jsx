@@ -1,6 +1,6 @@
 import React from 'react';
 import TodoListItem from './todo_list_item';
-import TodoForm from './todo_form';
+// import TodoForm from './todo_form';
 
 class TodoList extends React.Component {
 
@@ -19,7 +19,7 @@ class TodoList extends React.Component {
         <ul className="todo-list">
           { todoItems }
         </ul>
-        <TodoForm receiveTodo={ receiveTodo }/>
+        // <TodoForm receiveTodo={ receiveTodo }/>
       </div>
     );
   }

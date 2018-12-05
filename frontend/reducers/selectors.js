@@ -1,12 +1,4 @@
-export const allTodos = ({ todos }) => Object.keys(state.todos).map(id => todos[id]);
-
-export const stepsByTodoId = ({ steps }, todo_id) => {
-  const stepsByTodoId = [];
-  Object.keys(steps).forEach(stepId => {
-    const step = steps[stepId];
-    if (steps[stepId].todo_id === todo_id) stepsByTodoId.push(step)
-  })
-  return stepsByTodoId;
+export const allTodos = ({todos}) => {
+  const keys = Object.keys(todos);
+  return keys.map(i=> (todos[i]))
 };
-
-window.allTodos = allTodos;
